@@ -2,31 +2,35 @@
 using namespace std;
 /*What is Function Overloading - where two or more functions 
 can have the same name but different parameters.*/
-void calc(int a1, int a2)
+
+void calc(int a, int b)
 {
-	cout<<"Addition: "<<a1+a2<<endl;
+cout << "Addition: " << (a + b);
 }
 
-void calc(int s3,int s4, int s5)
+void calc(double a, double b)
 {
-	cout<<"Subtraction: "<<s3-s4-s5<<endl;
+	cout << endl << "Multiplication: " << (a * b);
 }
 
-void calc(float m6, int m7)
+void calc(double a, int b)
 {
-	cout<<"Multiplication: "<<m6*m7<<endl;
+	cout << endl << "Division: " << (a / b);
 }
 
-void calc(double d8, int d9)
+void calc(int a, double b)
 {
-	cout<<"Division: "<<d8/d9<<endl;
+    cout << endl << "Subtraction: " << (a-b);
 }
-main()
+
+// Driver code
+int main()
 {
-	//Here, same function name[calc()], but different datatype & parameters
-	calc(5, 2);
-	calc(7, 4, 8);
-	calc(3.0,4);
-	calc(40.0, 5.0);
-	
+	calc(10, 2);
+	calc(3.0, 6.0);
+	calc(4.0, 2);
+	calc(5, 2.0);
+
+	return 0;
 }
+
